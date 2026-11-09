@@ -8,7 +8,7 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header><p>MTM6302 · Assignment 3</p><span>Blacksmith</span></header>
+  <header><p>MTM6302 · Assignment 3</p><span>Interactive Blacksmith</span></header>
   <main>
     <p class="eyebrow">Your workshop</p>
     <h1>The Tiny Forge</h1>
@@ -34,14 +34,15 @@
       </section>
       <aside aria-label="Game instructions">
         <section class="panel">
-          <h2>Console commands</h2>
-          <p>Write each function in <code>script.js</code>, then try it in the browser console.</p>
-          <dl>
-            <dt><code>heatForge(20)</code></dt><dd>Add 20 heat, up to 100.</dd>
-            <dt><code>makeSword()</code></dt><dd>Use 30 heat to make one sword.</dd>
-            <dt><code>resetForge()</code></dt><dd>Return to 20 heat and zero swords.</dd>
-          </dl>
-          <p class="note">Commands work once you have built them. Refreshing resets the game.</p>
+          <h2>Forge controls</h2>
+          <h3>Heat to add</h3>
+          <input type="number" id="heatAdd" name="heatAdd" min="1" max="100">
+          <button type="submit" id="heatBtn">Add heat</button>
+          <p class="instrTxt">Enter a positive whole number. Maximum forge heat: 100.</p>
+          <button type="submit" id="makeSword" class="btnSize">Make sword</button>
+          <p class="instrTxt">Use 30 heat to make a sword.</p>
+          <button type="submit" id="resetForge" class="btnSize">Reset forge</button>
+          <p class="instrTxt">Return to 20 heat and zero swords.</p>
         </section>
         <section class="panel">
           <h2>Know your forge</h2>

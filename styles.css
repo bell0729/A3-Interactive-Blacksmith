@@ -39,3 +39,54 @@ footer { margin-top: 2rem; font-size: .9rem; color: #455449; }
 @media (max-width: 700px) { .layout { grid-template-columns: 1fr; } main { padding-top: 1.5rem; } .forge-top, .readings { padding: 1.5rem; } .message-box { margin-inline: 1.5rem; } }
 
 #forge-image { display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain; margin: -1rem auto 1rem; }
+
+#heatAdd{
+    width: 50%;
+    height: 50px;
+    font-size: large;
+    padding-left: 10px;
+    border-radius: 7px;
+    border-color: lightgray;
+    border-width: 2px;
+    padding-right: 10px;
+    font-weight: 500;
+    border-style: solid;
+}
+
+#heatBtn{
+    width: 45%;
+    margin-left: 3.996%;
+    height: 50px;
+    background-color: #006341;
+    color: white;
+    border-radius: 7px;
+    border-style: none;
+    font-size: large;
+    font-weight: 600;
+}
+
+.btnSize{
+    width: 100%;
+    border-radius: 7px;
+    font-size: large;
+    height: 50px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#makeSword{
+    background-color: #006341;
+    color: white;
+    border-style: none;
+}
+
+#resetForge{
+    background-color: white;
+    color: #006341;
+    border-style: solid;
+    border-color: #006341;
+}
+
+.instrTxt{
+    margin-top: 10px;
+}
