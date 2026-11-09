@@ -4,6 +4,7 @@
 
 // 1. Select the forge, heat, sword count, status, image, and message elements.
 //    Find their IDs in index.html.
+const $heatAmount = document.getElementById("heatAdd")
 const forge = document.querySelector("#forge")
 const heatCount = document.querySelector("#heat-value")
 const swordCount = document.querySelector("#sword-count")
@@ -59,8 +60,9 @@ function updateForge(){
 function resetForge(){
     heat = 20
     sword = 0
-    $log.textContent = "Welcome to the forge. Add heat to begin."
+    $log.textContent = ""
     forgeTop.classList.remove("is-cold", "is-ready", "is-roaring")
+    $heatAmount.valueAsNumber = 1
     updateForge()
 }
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
@@ -91,3 +93,20 @@ function makeSword(){
 // 8. Call resetForge() once to start the game.
 resetForge()
 // Use the tests in ASSIGNMENT.md to check your work.
+
+const $addHeatButton = document.getElementById("heatBtn")
+const $makeSword = document.getElementById("makeSword")
+const $resetForge = document.getElementById("resetForge")
+let numval = 0
+$addHeatButton.addEventListener("click", heatControl)
+function heatControl(){
+    if($heatAmount.valueAsNumber > 0 && Number.isInteger($heatAmount.valueAsNumber)){
+        numval = $heatAmount.valueAsNumber
+        heatForge(numval)
+    }
+    else{
+        $log.textContent = ("You cannot heat to that amount")
+    }
+}
+$makeSword.addEventListener("click", makeSword)
+$resetForge.addEventListener("click", resetForge)
